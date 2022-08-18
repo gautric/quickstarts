@@ -4,6 +4,12 @@ metadata:
   name: nodeapp
   labels:
     app: node
+    app.kubernetes.io/name: nodeapp
+    app.kubernetes.io/instance: nodeapp
+    app.kubernetes.io/component: service
+    app.kubernetes.io/part-of: hello-kubernetes-dapr
+    app.kubernetes.io/managed-by: kubectl
+    app.kubernetes.io/created-by: quickstart-user
 spec:
   selector:
     app: node
@@ -20,6 +26,12 @@ metadata:
   name: nodeapp
   labels:
     app: node
+    app.kubernetes.io/name: nodeapp
+    app.kubernetes.io/instance: nodeapp
+    app.kubernetes.io/component: deployment
+    app.kubernetes.io/part-of: hello-kubernetes-dapr
+    app.kubernetes.io/managed-by: kubectl
+    app.kubernetes.io/created-by: quickstart-user
 spec:
   replicas: 1
   selector:
@@ -29,6 +41,12 @@ spec:
     metadata:
       labels:
         app: node
+        app.kubernetes.io/name: nodeapp
+        app.kubernetes.io/instance: nodeapp
+        app.kubernetes.io/component: pod
+        app.kubernetes.io/part-of: hello-kubernetes-dapr
+        app.kubernetes.io/managed-by: kubectl
+        app.kubernetes.io/created-by: quickstart-user
       annotations:
         dapr.io/enabled: "true"
         dapr.io/app-id: "nodeapp"

@@ -13,6 +13,12 @@ spec:
     metadata:
       labels:
         app: python
+        app.kubernetes.io/name: pythonapp
+        app.kubernetes.io/instance: pythonapp
+        app.kubernetes.io/component: deployment
+        app.kubernetes.io/part-of: hello-kubernetes-dapr
+        app.kubernetes.io/managed-by: kubectl
+        app.kubernetes.io/created-by: quickstart-user
       annotations:
         dapr.io/enabled: "true"
         dapr.io/app-id: "pythonapp"
